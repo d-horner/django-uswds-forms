@@ -44,20 +44,23 @@ class UswdsDateWidget(MultiWidget):
         'min': '1900',
         'max': '2050',
         'maxlength': '4',
+        'oninput': 'this.value=this.value.slice(0,this.maxLength)',
     }
 
     month_attrs = {
-        'pattern': r'0?[1-9]|1[0-12]{2}',
+        'pattern': r'(0?[1-9]|1[0-12]){2}',
         'min': '1',
         'max': '12',
         'maxlength': '2',
+        'oninput': 'this.value=this.value.slice(0,this.maxLength)',
     }
 
     day_attrs = {
-        'pattern': r'0?[1-9]|1[0-9]|2[0-9]|3[01]{2}',
+        'pattern': r'(0?[1-9]|1[0-9]|2[0-9]|3[01]){2}',
         'min': '1',
         'max': '31',
         'maxlength': '2',
+        'oninput': 'this.value=this.value.slice(0,this.maxLength)',
     }
 
     def __init__(self, attrs=None):
