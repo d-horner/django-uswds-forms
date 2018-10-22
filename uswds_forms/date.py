@@ -43,18 +43,21 @@ class UswdsDateWidget(MultiWidget):
         'pattern': r'[0-9]{4}',
         'min': '1900',
         'max': '2050',
+        'maxlength': '4',
     }
 
     month_attrs = {
-        'pattern': r'0?[1-9]|1[0-12]',
+        'pattern': r'0?[1-9]|1[0-12]{2}',
         'min': '1',
         'max': '12',
+        'maxlength': '2',
     }
 
     day_attrs = {
-        'pattern': r'0?[1-9]|1[0-9]|2[0-9]|3[01]',
+        'pattern': r'0?[1-9]|1[0-9]|2[0-9]|3[01]{2}',
         'min': '1',
         'max': '31',
+        'maxlength': '2',
     }
 
     def __init__(self, attrs=None):
