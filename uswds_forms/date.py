@@ -42,11 +42,11 @@ class UswdsDateWidget(MultiWidget):
     year_attrs = {
         'pattern': r'[0-9]{4}',
         'min': '1900',
-        'max': '9999',
+        'max': '2050',
     }
 
     month_attrs = {
-        'pattern': r'0?[1-9]|1[012]',
+        'pattern': r'0?[1-9]|1[0-12]',
         'min': '1',
         'max': '12',
     }
