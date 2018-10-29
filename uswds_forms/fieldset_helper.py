@@ -46,6 +46,9 @@ def get_context(field):
     else:
         aria_hidden_label_tag = None
 
+    if isinstance(field.field.widget, forms.RadioSelect):
+        label_attrs['class'] = 'usa-radio-label'
+
     label_tag = field.label_tag(attrs=label_attrs)
 
     return {

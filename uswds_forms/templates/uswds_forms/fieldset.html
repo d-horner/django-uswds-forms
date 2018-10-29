@@ -1,4 +1,4 @@
-<fieldset {% if field.errors %}class="usa-input-error"{% endif %}>
+<fieldset class="usa-fieldset{% if field.errors %} usa-input-error{% endif %}">
   {% if put_field_before_label %}
     {{ field.errors }}
     {{ field }}

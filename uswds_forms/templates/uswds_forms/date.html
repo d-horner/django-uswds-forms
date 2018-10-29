@@ -1,21 +1,21 @@
-<span class="usa-form-hint" id="{{ widget.hint_id }}">For example: 04 28 2016</span>
+<span class="usa-form-hint" id="{{ widget.hint_id }}">For example: 01 28 2018</span>
 
-<div class="usa-date-of-birth">
+<div class="usa-memorable-date">
   <div class="usa-form-group usa-form-group-month">
   {% with widget=widget.subwidgets.month %}
-    <label for="{{ widget.attrs.id }}">Month</label>
+    <label class="usa-label" for="{{ widget.attrs.id }}">Month</label>
     {% include widget.template_name %}
   {% endwith %}
   </div>
   <div class="usa-form-group usa-form-group-day">
   {% with widget=widget.subwidgets.day %}
-    <label for="{{ widget.attrs.id }}">Day</label>
+    <label class="usa-label" for="{{ widget.attrs.id }}">Day</label>
     {% include widget.template_name %}
   {% endwith %}
   </div>
   <div class="usa-form-group usa-form-group-year">
   {% with widget=widget.subwidgets.year %}
-    <label for="{{ widget.attrs.id }}">Year</label>
+    <label class="usa-label" for="{{ widget.attrs.id }}">Year</label>
     {% include widget.template_name %}
   {% endwith %}
   </div>

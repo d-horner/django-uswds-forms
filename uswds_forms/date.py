@@ -113,7 +113,7 @@ class UswdsDateWidget(MultiWidget):
         hint_id = '%s_%s' % (widget['attrs']['id'], 'hint')
         for subwidget in widget['subwidgets']:
             subwidget['attrs'].update({
-                'class': 'usa-input-inline',
+                'class': 'usa-input usa-input-inline',
                 'aria-describedby': hint_id,
             })
         widget['subwidgets'] = DateTuple(*widget['subwidgets'])

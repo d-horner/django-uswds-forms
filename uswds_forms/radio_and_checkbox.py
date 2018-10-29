@@ -15,7 +15,7 @@ class UswdsWidgetMixin:
         context = super().get_context(name, value, attrs)  # type: ignore
         widget_attrs = context['widget']['attrs']
         if 'class' not in widget_attrs:
-            widget_attrs['class'] = 'usa-unstyled-list'
+            widget_attrs['class'] = 'usa-input-list'
         if 'id' not in widget_attrs:
             raise ValueError('USWDS-style inputs must have "id" '
                              'attributes')
@@ -35,6 +35,10 @@ class UswdsRadioSelect(UswdsWidgetMixin, forms.widgets.RadioSelect):
     `USWDS radio buttons example
     <https://standards.usa.gov/components/form-controls/#radio-buttons>`_.
     '''
+    option_template_name = 'uswds_forms/radio_input_label.html'
+    # template_name = 'uswds_forms/radio.html'
+    input_type = 'radio'
+
 
 
 class UswdsCheckboxSelectMultiple(UswdsWidgetMixin,
